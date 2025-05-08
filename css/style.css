@@ -20,8 +20,19 @@ li{
 }
 
 /* topbar */
-.topbar span{
-    padding: 0 15px;
+.top-bar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.top-bar .topbar{
+    width: 80%;
+}
+.top-bar .topbar1{
+    width: 20%;
+}
+.topbar a{
+    padding: 0 5px;
 }
 .top_text{
     color: var(--darkyellow);
@@ -43,6 +54,7 @@ li{
 
 .active:hover{
  border-bottom: 2px solid var(--darkyellow);
+ color: darkblue !important;
 }
 
 /* banner */
@@ -51,7 +63,7 @@ li{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 90vh;
+    /* height: 90vh; */
     /* width: 1920px; */
 }
 
@@ -91,12 +103,13 @@ li{
 
 /* promise */
 .promise{
-    height: 90vh;
+    /* height: 90vh; */
     background-image: url(../images/bg-section-counter1\ 1.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     padding-top: 150px;
+    padding-bottom: 150px;
 }
 .promise_text{
     max-width: 753px;
@@ -156,7 +169,6 @@ li{
 }
 .law1{
     background-image: url('../images/Rectangle\ 6.png');
-    /* background-blend-mode:luminosity; */
     max-width: 250px; 
     width: 100%;
     height: 35vh;
@@ -165,7 +177,6 @@ li{
    
 }
 .law2{
-    /* mix-blend-mode: black; */
     background-image: url('../images/Rectangle\ 9.png'); 
     max-width: 250px;
     width: 100%;
@@ -182,7 +193,6 @@ li{
     border-radius: 10px;
 }
 .law4{
-    /* mix-blend-mode: black; */
     background-image: url('../images/Rectangle\ 10.png');
     max-width: 250px;
     width: 100%;
@@ -191,7 +201,6 @@ li{
     border-radius: 10px;
 }
 .law5{
-    /* mix-blend-mode: black; */
     background-image: url('../images/Rectangle\ 11.png');
     background-repeat: no-repeat;
     max-width: 250px;
@@ -230,9 +239,9 @@ li{
     height: 2px;
     width: 40%;
     position: absolute;
-    left: 65px;
+    left: 50%;
     top: 100%;
-    transform: translate(-50% -50%);
+    translate: -50% -50%;
 }
 .law_para3{
     padding-top: 110px;
@@ -247,9 +256,9 @@ li{
     height: 2px;
     width: 50%;
     position: absolute;
-    left: 60px;
+    left: 50%;
     top: 100%;
-    transform: translate(-50% -50%);
+    translate: -50% -50%;
 }
 .law_para4{
     padding-top: 110px;
@@ -345,9 +354,9 @@ li{
     height: 2px;
     width: 40%;
     position: absolute;
-    left: 65px;
+    left: 50%;
     top: 100%;
-    transform: translate(-50% -50%);
+    translate: -50% -50%;
 }
 .law_para7{
     padding-top: 110px;
@@ -396,9 +405,9 @@ li{
     height: 2px;
     width: 40%;
     position: absolute;
-    left: 65px;
+    left: 50%;
     top: 100%;
-    transform: translate(-50% -50%);
+    translate: -50% -50%;
 }
 .law_para10{
     padding-top: 110px;
@@ -413,9 +422,26 @@ li{
     height: 2px;
     width: 45%;
     position: absolute;
-    left: 60px;
+    left: 50%;
     top: 100%;
-    transform: translate(-50% -50%);
+    translate: -50% -50%;
+}
+
+.practice_row .practice-col{
+    position: relative;
+    z-index: 1;
+    border-radius: 10px;
+    /* overflow: hidden; */
+}
+.practice_row .practice-col::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #0000007b;
+    left: 0;
+    top: 0;
+    z-index: -1;
 }
 .p-law:hover{
     box-shadow: 0 0 10px black;
@@ -488,6 +514,11 @@ li{
     background: none;
     border: 2px solid var(--darkyellow);
 }
+.clientinput:focus{
+    outline: none;
+    box-shadow: none;
+    background: none;
+}
 /* footer */
 .footer{
     background-color: var(--blue);
@@ -513,14 +544,14 @@ li{
     margin: 0 10px;
     color: white;
 }
-.con_info li{
+.col_info li{
     margin: 15px 0;
 }
-.con_info ul li a{
+.col_info ul li a{
     font-size: 18px;
     color: white;
 }
-.con_info .info{
+.col_info .info{
     font-size: 14px;
 }
 .fot_icon{
@@ -547,24 +578,105 @@ li{
 @media screen and (max-width:1199px) {
    .pro_para2{
     font-size: 15px;
-   } 
+   }
+/* .topbar span{
+    flex-direction: column;
+} */
+.footer_row {
+    width: 50%;
+    display: flex;
+    justify-content: center; 
+}
+.footer_row .col{
+    margin-top: 15px;
+}
+ 
 }
 @media screen and (max-width:991px){
-    .pro_para2{
-        font-size: 11px;
-    }
-    .mainpro .leftpro img{
-        max-width: 300px;
-        width: 100%;
-    }
-}
-@media screen and (max-width:765px){
-    .mainpro .leftpro img{
-        max-width: 300px;
-        width: 100%;
-        height: 300px;
-    }
-}
-@media screen and (max-width:789px){
    
+    .topbar a{
+      font-size: 14px;
+    }
+    .pro_para2,.pro_hed{
+         padding-top: 20px;
+    }
+   
+     .promise{
+        padding-top: 90px;
+        padding-bottom: 90px;
+     }
+    .mainpro{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .practice_row{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      width: 65%;
+    }
+     .practice-col{
+        margin-top: 10px;
+    }
+    .practice_para{
+        font-size: 15px;
+        text-align: center;
+    }
+    .practice_hed{
+        text-align: center;
+    }
 }
+@media screen and (max-width:767px){
+    .topbar{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+       } 
+       .topbar1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+       .top-bar .topbar{
+        width: 100%;
+    }
+    .top-bar .topbar1{
+        width: 100%;
+    }
+       .ban_text .ban_para2{
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+    .practice_row{
+        flex-direction: column;
+        width: 100%;
+      }
+    .footer_row{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:489px){
+    .mainpro .leftpro img{
+      padding-right: 50px;
+    }
+    .team_hed{
+        font-size: 30px;
+        text-align: center;
+    }
+    .footer_row{
+        padding-right: 200px;
+    }
+    .col_info2 li a{
+        font-size: 14px;
+    }
+    .col_info ul li a{
+        font-size: 12px;
+    }
+}
+
+
+
